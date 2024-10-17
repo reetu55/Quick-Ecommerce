@@ -6,7 +6,38 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text("Home Screen")),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                IconButton(onPressed: () {}, icon: Icon(Icons.qr_code_scanner)),
+                Expanded(
+                  child: Container(
+                    color: Colors.orange,
+                    child: Row(
+                      children: [
+                        Icon(Icons.camera_alt),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Expanded(child: TextField()),
+                        Container(
+                          color: Colors.orange,
+                          child: Text("Search"),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+                IconButton(
+                    onPressed: () {}, icon: Icon(Icons.notifications_outlined))
+              ],
+            ),
+            Center(child: Text("Home Screen")),
+          ],
+        ),
+      ),
     );
   }
 }
