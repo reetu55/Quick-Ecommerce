@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quick_ecommerce/view/screens/account_screen.dart';
-import 'package:quick_ecommerce/view/screens/cart_screen.dart';
-import 'package:quick_ecommerce/view/screens/home_screen.dart';
-import 'package:quick_ecommerce/view/screens/messages_screen.dart';
+import 'package:quick_ecommerceo.com/view/screens/account_screen.dart';
+import 'package:quick_ecommerceo.com/view/screens/cart_screen.dart';
+import 'package:quick_ecommerceo.com/view/screens/home_screen.dart';
+import 'package:quick_ecommerceo.com/view/screens/messages_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   const DashboardScreen({super.key});
@@ -22,7 +22,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     HomeScreen(),
     MessagesScreen(),
     CartScreen(),
-    AccountScreen(),
+    AccountScreen(), // enter ctrl+space to remove the error
   ];
 
   @override

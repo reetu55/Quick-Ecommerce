@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quick_ecommerce/view/screens/dashboard_screen.dart';
+
+import 'package:quick_ecommerceo.com/view/screens/dashboard_screen.dart';
 
 void main() {
   runApp(const MainApp());
