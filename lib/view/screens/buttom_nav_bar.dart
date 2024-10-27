@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:quick_ecommerceo.com/view/screens/account_screen.dart';
-import 'package:quick_ecommerceo.com/view/screens/cart_screen.dart';
-import 'package:quick_ecommerceo.com/view/screens/home_screen.dart';
-import 'package:quick_ecommerceo.com/view/screens/messages_screen.dart';
+import 'package:quick_ecommerceo.com/view/screens/buttom_nav/account/account_screen.dart';
+import 'package:quick_ecommerceo.com/view/screens/buttom_nav/cart/cart_screen.dart';
+import 'package:quick_ecommerceo.com/view/screens/buttom_nav/home/home_screen.dart';
+import 'package:quick_ecommerceo.com/view/screens/buttom_nav/message/messages_screen.dart';
 
-class DashboardScreen extends StatefulWidget {
-  const DashboardScreen({super.key});
+class ButtomNavBar extends StatefulWidget {
+  const ButtomNavBar({super.key});
 
   @override
-  State<DashboardScreen> createState() => _DashboardScreenState();
+  State<ButtomNavBar> createState() => _ButtomNavBarState();
 }
 
-class _DashboardScreenState extends State<DashboardScreen> {
+class _ButtomNavBarState extends State<ButtomNavBar> {
   int selectedIndex = 0;
   onBottomIconTop(int index) {
     selectedIndex = index;
