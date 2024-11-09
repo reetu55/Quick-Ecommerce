@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:quick_ecommerceo.com/view/screens/buttom_nav/account/account_screen.dart';
-import 'package:quick_ecommerceo.com/view/screens/buttom_nav/cart/cart_screen.dart';
-import 'package:quick_ecommerceo.com/view/screens/buttom_nav/home/home_screen.dart';
-import 'package:quick_ecommerceo.com/view/screens/buttom_nav/message/messages_screen.dart';
+import 'package:quick_ecommerceo.com/view/screens/buttom_nav_bar/account/account_screen.dart';
+import 'package:quick_ecommerceo.com/view/screens/buttom_nav_bar/cart/cart_screen.dart';
+import 'package:quick_ecommerceo.com/view/screens/buttom_nav_bar/home/home_screen.dart';
+import 'package:quick_ecommerceo.com/view/screens/buttom_nav_bar/message/messages_screen.dart';
 
 class ButtomNavBar extends StatefulWidget {
   const ButtomNavBar({super.key});

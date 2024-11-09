@@ -58,8 +58,8 @@ class _HomeBannerSectionState extends State<HomeBannerSection> {
           children: [
             ...bannerImageLinks.asMap().entries.map((value) {
               return Container(
-                width: 10.0,
-                height: 10.0,
+                width: 9.0,
+                height: 9.0,
                 margin:
                     const EdgeInsets.symmetric(vertical: 10.0, horizontal: 4.0),
                 decoration: BoxDecoration(
@@ -73,7 +73,7 @@ class _HomeBannerSectionState extends State<HomeBannerSection> {
               height: 10,
               width: 10,
               decoration:
-                  BoxDecoration(shape: BoxShape.circle, color: Colors.grey),
+                  BoxDecoration(shape: BoxShape.circle, color: Colors.red),
             ),
           ],
         ),

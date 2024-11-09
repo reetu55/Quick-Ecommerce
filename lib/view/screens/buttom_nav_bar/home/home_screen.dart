@@ -1,7 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:quick_ecommerceo.com/view/screens/buttom_nav/home/components/home_banner_section.dart';
+import 'package:quick_ecommerceo.com/view/screens/buttom_nav_bar/home/components/deal_section.dart';
+import 'package:quick_ecommerceo.com/view/screens/buttom_nav_bar/home/components/home_banner_section.dart';
+import 'package:quick_ecommerceo.com/view/screens/buttom_nav_bar/home/components/home_title.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -26,9 +28,27 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 10,
             ),
             HomeBannerSection(),
+            Dealsection(),
+            FlashSaleSection(),
           ],
         ),
       ),
+    );
+  }
+}
+
+class FlashSaleSection extends StatelessWidget {
+  const FlashSaleSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        HomeTitle(title: "Flash Sale"),
+        SizedBox(
+          height: 10,
+        ),
+      ],
     );
   }
 }
