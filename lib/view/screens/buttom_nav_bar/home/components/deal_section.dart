@@ -30,7 +30,7 @@ class Dealsection extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
-                        color: Colors.purple,
+                        color: Colors.amber,
                       ),
                     ),
                     Text(
@@ -38,7 +38,7 @@ class Dealsection extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 12,
                         fontWeight: FontWeight.w300,
-                        color: Colors.amber,
+                        color: Colors.purple,
                       ),
                     ),
                   ],
@@ -51,7 +51,7 @@ class Dealsection extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 14,
                         fontWeight: FontWeight.bold,
-                        color: Colors.purple,
+                        color: Colors.amber,
                       ),
                     ),
                     Container(
@@ -62,7 +62,7 @@ class Dealsection extends StatelessWidget {
                           overflow: TextOverflow.ellipsis,
                           fontSize: 12,
                           fontWeight: FontWeight.w300,
-                          color: Colors.amber,
+                          color: Colors.purple,
                         ),
                       ),
                     ),
@@ -71,18 +71,15 @@ class Dealsection extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () {},
                   child: const Text("Collect all"),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                  ),
                 ),
               ],
             ),
           ),
           SizedBox(
             height: 10,
-          ),
-          HomeTitle(title: "Best Deals"),
-          Container(
-            color: Colors.red,
-            height: 100,
-            width: 200,
           ),
         ],
       ),

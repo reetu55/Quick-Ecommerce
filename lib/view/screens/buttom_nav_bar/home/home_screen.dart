@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:quick_ecommerceo.com/view/screens/buttom_nav_bar/home/components/deal_section.dart';
@@ -42,13 +43,58 @@ class FlashSaleSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        HomeTitle(title: "Flash Sale"),
-        SizedBox(
-          height: 10,
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(left: 10, right: 10),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              HomeTitle(title: "Flash Sale"),
+              TextButton(onPressed: () {}, child: Text("Shop more")),
+            ],
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [productCard(), productCard(), productCard()],
+          )
+        ],
+      ),
+    );
+  }
+
+  Widget productCard() {
+    return Container(
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10),
+            child: Image.network(
+                height: 80,
+                width: 80,
+                fit: BoxFit.cover,
+                "https://5.imimg.com/data5/ANDROID/Default/2023/7/326598224/XL/AH/EJ/189033354/product-jpeg-500x500.jpg"),
+          ),
+          Align(
+            alignment: Alignment.centerLeft,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("500 tk"),
+                Text(
+                  "1000tk",
+                  style: TextStyle(decoration: TextDecoration.lineThrough),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
