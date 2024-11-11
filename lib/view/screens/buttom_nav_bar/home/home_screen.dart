@@ -59,14 +59,41 @@ class FlashSaleSection extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [productCard(), productCard(), productCard()],
+            children: [
+              FlashSaleProductCard(
+                  imageLink:
+                      "https://5.imimg.com/data5/ANDROID/Default/2023/7/326598224/XL/AH/EJ/189033354/product-jpeg-500x500.jpg",
+                  mainPrice: "350tk",
+                  oldPrice: "500tk"),
+              FlashSaleProductCard(
+                  imageLink:
+                      "https://cdn.eastsideco.com/media/v3/blog/product-page-key-elements/apple-pdp.png",
+                  mainPrice: "500tk",
+                  oldPrice: "750tk"),
+              FlashSaleProductCard(
+                  imageLink:
+                      "https://5.imimg.com/data5/EQ/EG/FZ/SELLER-16603762/jeweler-product-photography-in-hyderabad.jpg",
+                  mainPrice: "850tk",
+                  oldPrice: "1200tk"),
+            ],
           )
         ],
       ),
     );
   }
+}
 
-  Widget productCard() {
+class FlashSaleProductCard extends StatelessWidget {
+  const FlashSaleProductCard(
+      {super.key,
+      required this.imageLink,
+      required this.mainPrice,
+      required this.oldPrice});
+  final String imageLink;
+  final String mainPrice;
+  final String oldPrice;
+  @override
+  Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
       child: Column(
@@ -75,20 +102,19 @@ class FlashSaleSection extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: Image.network(
-                height: 80,
-                width: 80,
-                fit: BoxFit.cover,
-                "https://5.imimg.com/data5/ANDROID/Default/2023/7/326598224/XL/AH/EJ/189033354/product-jpeg-500x500.jpg"),
+                height: 80, width: 80, fit: BoxFit.cover, imageLink),
           ),
           Align(
             alignment: Alignment.centerLeft,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("500 tk"),
+                Text("$mainPrice"),
                 Text(
-                  "1000tk",
-                  style: TextStyle(decoration: TextDecoration.lineThrough),
+                  "$oldPrice",
+                  style: TextStyle(
+                      decoration: TextDecoration.lineThrough,
+                      color: Colors.grey),
                 ),
               ],
             ),
